@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('../images/bg.png') repeat top left;
+    font-family: 'Lato', sans-serif;
+}
+
+.container-question{
+    width: 95vw;
+    max-width: 650px;
+    margin: 0 auto 12vh;
+}
+
+.container-question .title{
+    margin-top: 8vh;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: rgb(234, 88, 26);
+}
+
+.container-question .question{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+}
+
+.container-question .question .question-title{
+    background: #FFF;
+    padding: 1.5rem;
+    border-radius: 3px;
+    border: 1px solid #fa958c;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.12s ease-in;
+}
+
+.container-question .question:hover .question-title,
+.container-question .question.active .question-title{
+    background: rgb(234, 88, 26);
+    color: #FFF;
+}
+
+.container-question .question .question-title i{
+    color: rgb(234, 88, 26);
+}
+
+.container-question .question:hover .question-title i,
+.container-question .question.active .question-title i{
+    color: #FFF;
+}
+
+.container-question .question .question-text{
+    display: none;
+}
+
+.container-question .question.active .question-text{
+    display: block;
+    background: #FFF;
+    padding: 1.5rem;
+    border-radius: 0 0 10px 10px;
+    color: #666;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
